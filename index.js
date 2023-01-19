@@ -33,7 +33,7 @@ hbs.registerPartials(path.join(__dirname, 'views/partials'));
 
 
 //Sesiones configuracion
-//app.set("trust proxy", 1);
+app.set("trust proxy", 1);
 app.use(session ({
     secret: process.env.secretSession,
     resave: false,
