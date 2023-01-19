@@ -1,0 +1,193 @@
+    <link rel="stylesheet" href="./css/home.css">
+    <title>Home</title>
+
+<body>
+    {{>navbar1}}
+    
+    {{>alertas}}
+
+    <main>
+        <div class="contenedorTextoPortada">
+            <div class="imagenPortada"></div>
+            <div class="descripcion">
+                <h3 class="conseguiElTrabajo">Conseguí el trabajo que querés!</h3> 
+                <h1>Creá un Curriculum profesional, facíl y rápido</h1>
+                <a href="/verificarDatos/verificarDatos">
+                    <button class="buttonComenzar">Comenzar a crear mi CV</button>
+                </a>
+                <a href="#aca">
+                    <div class="anclaScroll">
+                        <button class="buttonScroll"><a class="anclaPasos" href="#acaPasos">
+                        <img class="scrollImg" src="./img/Iconos/4567708_app_arrow_bookmark_interface_internet_icon.png" alt="scroll" loading="lazy">
+                        </a></button>
+                    </div>
+                </a>        
+            </div>
+        </div>
+
+        <div class="seccionPasos" data-aos="zoom-in-top"  id="acaPasos">
+            <h1><a>¿Cómo funciona?</a></h1>
+            <div class="pasosImg">            
+                <div class="detalles">
+                    <div>PASO 01</div>
+                    <strong>Regístrate!</strong>
+                    <h5>Deberás registrarte ingresando tu email y una contraseña.</h5>
+                </div>
+                <div class="detalles">
+                    <div>PASO 02</div>
+                    <strong>Completá tus datos</strong>
+                    <h5>Cargá tus datos personales, laborales y académicos.</h5>
+                </div>
+                <div class="detalles">
+                    <div>PASO 03</div>
+                    <strong>Creá tu perfíl</strong>
+                    <h5>Subí tu foto y una breve explicación sobre tí y tus cualidades.</h5>
+                </div>
+                <div class="detalles">
+                    <div>PASO 04</div>
+                    <strong>Elegí una plantilla</strong>
+                    <h5>Elegí la plantilla que mejor se adapte a lo que querés.</h5>
+                </div>
+                <div class="detalles">
+                    <div>PASO 05</div>
+                    <strong>Listo!</strong>
+                    <h5>Ya tendrás tu CV listo para imprimir y descargar cuando quieras.</h5>
+                </div>
+            </div>
+            <a href="/verificarDatos/verificarDatos">
+                <button class="buttonMiCrearCV">Crear mi CV</button>
+            </a>
+        </div>
+
+        <div class="contenedorCarrusel">
+            <div class="seccionCarrusel">
+                <div class="carruselTexto" data-aos="zoom-in-top">
+                    <h2>Mirá algunas de las plantillas de CV que podrás elegir para crear tu curriculum</h2>
+                    <p>Creá un CV profesional y creativo de forma rápida y sencilla.</p>
+                    <button class="buttonQuiero">
+                        <a href="/verificarDatos/verificarDatos">Quiero ésta plantilla</a>
+                    </button>
+                </div>
+                <div class="carrousel" data-aos="zoom-in-top">
+                    <div class="grande">
+                        <img src="./img/ejemplos/page/creativo2.svg" alt="Imagen2" class="img">
+                        <img src="./img/ejemplos/page/cronologico.svg" alt="Imagen1" class="img">
+                        <img src="./img/ejemplos/page/moderno1.svg" alt="Imagen3" class="img">
+                        <img src="./img/ejemplos/page/funcional.svg" alt="Imagen4" class="img" loading="lazy">
+                        <img src="./img/ejemplos/page/creativo1.svg" alt="Imagen5" class="img">
+                        <img src="./img/ejemplos/page/basico.svg" alt="Imagen6" class="img">
+                    </div>
+                    <ul class="puntos">
+                        <li class="punto activo"></li>
+                        <li class="punto"></li>
+                        <li class="punto"></li>
+                        <li class="punto"></li>
+                        <li class="punto"></li>
+                        <li class="punto"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="seccionPreguntasFrecuentes" id="preguntasFrecuentes">
+            <div>
+                <h1 data-aos="zoom-in-top" >Preguntas frecuentes</h1>
+                <details open data-aos="zoom-in-top">
+                    <summary><h3>¿Qué es un Curriculum Vitae?</h3></summary>
+                    <div>
+                        <p>El currículum vitae (CV) es un resumen breve de tus experiencias formativas y laborales y de tus habilidades profesionales. Su objetivo es demostrar la idoneidad de tu candidatura a un puesto de trabajo concreto y permitirte acceder al proceso de selección.</p>
+                        <p>Se trata de una herramienta esencial para el desarrollo profesional de cualquier persona, pues constituye una oportunidad para demostrar a los responsables de selección de personal que eres el candidato o candidata ideal para cubrir una vacante de empleo. Conviene tenerlo siempre actualizado, pues nunca sabes en qué momento de tu carrera se puede presentar la ocasión de optar al puesto deseado.</p>
+                    </div>
+                </details>
+                <details data-aos="zoom-in-top">
+                    <summary><h3>¿Porqué el diseño del CV es importante?</h3></summary>
+                    <div>
+                        <p>Los encargados de llevar a cabo la selección de personal en las empresas suelen fijarse en aquellos currículums que son más atractivos gráficamente.</p>
+                        <p>Conviene que tengas en cuenta qué formato y diseño de CV puede encajar mejor con los valores y objetivos de la empresa a la que te diriges.</p>
+                        <p>Aquí podrás elaborar un currículum creativo para presentarte de una forma visualmente más agradable, y así diferenciarte del resto de candidatos.</p>
+                    </div>
+                </details>
+                <details data-aos="zoom-in-top">
+                    <summary><h3>Consejos para crear un buen currículum</h3></summary>
+                    <div>
+                        <ol>
+                            <li>
+                                <strong>Sé breve.</strong> 
+                                Tu currículum no debe ser muy extenso, preferentemente una página (máximo dos),
+                                pero en él tiene que aparecer la información clave de tu perfil.
+                            </li>
+                            <li>
+                                <strong>Adáptalo a las empresas.</strong> 
+                                Modifica tu currículum para que encaje con cada candidatura. Destaca en cada caso 
+                                tus aptitudes, competencias, conocimientos y experiencia que te hacen ideal para 
+                                ocupar el puesto de trabajo concreto.
+                            </li>
+                            <li>
+                                <strong>Cuida los aspectos formales del currículum.</strong> 
+                                Incluye una buena fotografía, utiliza un tipo de letra formal pero agradable, 
+                                cuida la redacción y estructura bien los diferentes apartados. El CV tiene que ser 
+                                claro y tener una buena presentación.
+                            </li>
+                            <li>
+                                <strong>Usa aplicaciones y plantillas que te permitan crear un CV atractivo.</strong> 
+                                En éste sitio web encontrarás herramientas que permiten diseñar tu CV de forma visual, creativa y profesional a través de plantillas gratuitas y personalizables.
+                            </li>
+                            <li>
+                                <strong>Sé sincero.</strong> Comparte información verdadera. La información falsa 
+                                siempre acaba saliendo a la luz y perjudicará a tu perfil.
+                            </li>
+                            <li>
+                                <strong>Evita detalles innecesarios.</strong> 
+                                No añadas detalles como tu estado civil o que has realizado un curso de yoga si 
+                                no tiene relación con la oferta de empleo. Incluye únicamente aquella información 
+                                que sea de interés para el tipo de trabajo que estás buscando.
+                            </li>
+                            <li>
+                                <strong>Utiliza y destaca palabras clave.</strong> 
+                                Incluye todas las palabras clave que quieres destacar de tu perfil y hazlas visibles. 
+                                La primera lectura de tu currículum será rápida, si destacas bien las palabras clave 
+                                que te identifican ayudarás a que los empleadores se fijen en ti.</li>
+                            <li>
+                                <strong>Añade los enlaces a tus blogs o redes profesionales</strong>. 
+                                Comparte todos los enlaces en los que se pueda encontrar más información sobre ti 
+                                y mantén esa información actualizada.</li>
+                            <li>
+                                <strong>Incluye tus competencias, habilidades y conocimientos.</strong> 
+                                Puede que hayas adquirido competencias y conocimientos a través de vías no formales. Muéstralo en tu currículum, esto te hará destacar por encima de los demás.
+                            </li>
+                            <li>
+                                <strong>Repásalo y pide opinión antes de enviarlo.</strong> 
+                                Comparte tu currículum con las personas que consideres oportunas para que te digan 
+                                su primera impresión y en qué se han fijado.
+                            </li>
+                        </ol>
+                    </div>
+                </details>
+                <details class="marginBottom" data-aos="zoom-in-top">
+                    <summary><h3>¿Crear un CV aquí es gratís?</h3></summary>
+                    <div>
+                        <p><strong>Sí,</strong> aquí puedes crear tu curriculum gratuitamente.</p>
+                        <p>Ofrecemos este servicio libre y gratuito para quien desee usarlo. Sin embargo contamos con <strong>donacines</strong> para aquellos que quieran aportar.</p>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <div class="dibujo"></div>
+        <div class="quienesSomos"  data-aos="zoom-in-top">
+            <div class="opacidad">
+                <div class="imgQuienesSomos"></div>
+                <div data-aos="zoom-in-top" class="texto">
+                    <h3>QUIENES SOMOS</h3>
+                    <p>Somos una organización sin fínes de lucro.</p>
+                    <p>Queremos brindar de forma gratuita las herramientas que faciliten la creación de un CV profesional y creativo</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    {{>footer}}
+    <script src="../js/carrucel.js"></script>
+</body>
+
+

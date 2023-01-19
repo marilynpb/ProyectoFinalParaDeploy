@@ -1,0 +1,62 @@
+<link rel="stylesheet" href="../css/datosPersonales.css">
+    <title>Datos Personales</title>
+    
+<body>
+    {{>navbar2}}
+
+    {{>alertas}}
+    
+    <main>   
+        <div class="container">
+            <div class="encabezado">
+                <h1 class="titulo">Información personal</h1>
+                <p class="contador">1/5</p>
+                <meter min="0" max="100" value="25" low="26" high="150" id="barra"></meter>
+            </div>
+            <form action="" method="post" class="formulario">
+                <div class="formIzq">
+                    <input type="hidden" name="_csrf" value="{{csrfToken}}"/>
+                    <label>Nombre*</label>
+                    <input type="text" id="nombre" name="nombre">
+                    <label>Apellido*</label>
+                    <input type="text" id="apellido" name="apellido">
+                    <label>Fecha de nacimiento</label><br>
+                    <input type="text" id="fechaNac" name="fechaNac" placeholder="dd/mm/aaaa"><br>
+                    <label>Sexo</label><br>
+                    <select class="selectXL" name="sexo">
+                        <option selected disabled>Seleccione una opción</option>
+                        <option>Femenino</option>
+                        <option>Masculino</option>
+                        <option>Otro</option>
+                    </select>
+                    <label>Estado civíl</label>
+                    <select class="selectXL estadoCivil" name="estadoCivil">
+                        <option selected disabled>Seleccione una opción</option>
+                        <option>Soltero/a</option>
+                        <option>Casado/a</option>
+                        <option>Otro</option>
+                    </select>
+                </div>
+                <div class="formDer">
+                    <label>Dirección (calle)*</label>
+                    <input type="text" name="calle">
+                    <label>Altura*</label>
+                    <input type="text" name="altura">
+                    <label>Código postal</label>
+                    <input type="text" name="cp"><br>
+                    <label>País*</label><br>
+                    <input type="text" id="pais" name="pais">
+                    <label>Número de teléfono*</label>
+                    <input type="text" name="telefono">       
+                </div>
+                <div class="siguiente">
+                    <button type="submit">Siguiente</button>
+                    <p class="politicas">Al hacer click acepta nuestros Términos y Condiciones</p>
+                </div>
+            </form> 
+        </div>
+    </main>
+
+    {{>footer}}
+
+</body>

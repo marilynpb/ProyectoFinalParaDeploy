@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style/miCurriculum.css">
+    <title>Mi cv</title>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="menuLateral">
+                <a href="../index.html"><img src="../img/LogoMakr-8VCzkk.png" class="logo" alt="logo"></a>
+                <ul>
+                    <li><img src="../img/Iconos/person-circle.svg" class="userIcon"><h3>Nombre Usuario</h3></li>
+                    <li><a href="./miCuenta.html">Mi cuenta</a></li>
+                    <li><a href="./datosPersonales.html">Crear Curriculum</a></li>
+                    <li><a href="../index.html" ><div class="icono cerrarSesion"><p>Cerrar sesión</p><img src="../img/Iconos/box-arrow-in-right.svg"></a></div></li>
+                </ul>
+            </div>
+            <div class="datosCuenta"> 
+                <form>
+                    <h1>Mi Curriculum</h1>
+                    <div class="miCV">
+                        <h4>Volvé a descargar o imprimir el último CV que creaste</h4>
+                        <div class="cvs">
+                            <button class="editar"><img src="../img/Iconos/pencil-square.svg"></button>
+                            <button class="editar conMargin"><img src="../img/Iconos/printer.svg"></button>
+                            <img src="../img/ejemplos/page/creativo1.svg">
+                            <button class="descargar download">Descargar ⭳</button>
+                        </div>
+                        <p><a href="/">Eliminar CV</a></p>
+                    </div>  
+                </form>
+            </div> 
+        </div>    
+    </main>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+        AOS.init();
+        window.addEventListener("scroll", function(){
+            var header= document.querySelector("header");
+            header.classList.toggle("abajo", window.scrollY>50);
+        })
+    </script>
+</body>
+</html>

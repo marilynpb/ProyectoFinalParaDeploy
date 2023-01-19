@@ -1,0 +1,285 @@
+*{
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+}
+p{
+    text-transform: lowercase;
+}
+p::first-letter{
+    text-transform: uppercase;
+}
+
+h1{
+    text-transform: capitalize;
+}
+h1::first-letter{
+    text-transform: uppercase;
+}
+
+h2{
+    text-transform: lowercase;
+}
+h2::first-letter{
+    text-transform: uppercase;
+}
+
+h3{
+    text-transform: lowercase;
+}
+h3::first-letter{
+    text-transform: uppercase;
+}
+
+h4{
+    text-transform: lowercase;
+}
+h4::first-letter{
+    text-transform: uppercase;
+}
+
+textarea{
+    text-transform: lowercase;
+}
+textarea::first-letter{
+    text-transform: uppercase;
+}
+body{
+    background: linear-gradient(90deg, rgba(26,18,30,1) 0%, rgba(121,17,173,1) 34%, rgba(84,20,180,1) 56%, rgba(72,14,161,1) 76%, rgba(32,14,62,1) 95%, rgba(26,17,35,1) 100%);
+    height: 1200px;
+}
+
+header{
+    display: flex;
+    margin-top: 3vh;
+    justify-content:space-around;
+}
+
+.otro{
+    font-size: 3vh;
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+    width: auto;
+    text-align: center;
+    background-color: #18102C;    
+    border: none;
+    border-radius: 25px;
+    color: white;
+    padding: 1vh;
+    padding-left: 2vh;
+    padding-right: 2vh;
+    margin: 0%;
+    box-shadow: #b8b6ba 1px 2px 6px, #bab8bd 1px 2px 4px, #b1aeb3 1px 2px 6px;
+}
+
+.otro:hover{
+    box-shadow: #bab8bd 1px 4px 10px, #bab8bd 1px 4px 20px, #bab8bd 1px 4px 10px;
+}
+
+main{
+    width: 65%;
+    max-width: 1240px;
+    max-height: 3000px;
+    min-width: 900px;
+    min-height: 1100px;
+    padding-bottom: 200px;
+    margin-top: 5vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container{
+    height: 100%;
+    background-color: white;
+}
+
+.izquierda{
+    text-align: center;
+    float: left;
+    width: 35%;
+    height: 91.5%;
+    color: white;
+    background-color:rgb(45, 50, 96);
+}
+
+.izquierda h3{
+    text-align: center;
+    margin-top: 3vh;
+    margin-bottom: 7vh;
+    font-weight: lighter;
+}
+
+.izquierda ol li {
+    margin-bottom: 5vh;
+}
+
+.perfilImg{
+    margin-bottom: 2vh;
+    width:100%;
+    background-color: rgb(158, 153, 153);
+}
+
+.izquierda h2{
+    font-weight: bolder;
+    margin-bottom: 2vh;
+    margin-top: 10vh;
+    text-align: start;
+    color: white;
+}
+
+.izquierda p{
+    color: white;
+    font-size: 20px;
+}
+
+.izquierda table, .izquierda h2, .izquierda hr{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.izquierda hr{
+    width: 90%;
+}
+
+p{
+    font-size: 20px;
+}
+
+.hrDatos{
+    float: right;
+    width: 39%;
+    height: 2px;
+    background-color: white;
+    border: none;
+    margin-top: 5vh;
+}
+
+.hrIdiomas{
+    float: right;
+    width: 60%;
+    height: 2px;
+    background-color: white;
+    border: none;
+    margin-top:12vh;
+}
+
+.datos{
+    font-weight: lighter;
+}
+
+.apellido{
+    margin-bottom: 7vh;
+}
+
+.derecha{
+    float: right;
+    width: 65%;
+    height: 100%;
+    text-align: justify;
+    padding-right: 10vh;
+    padding-left: 6vh;
+    color: black;
+}
+
+.conPadding{
+    padding-left: 3vh;
+}
+
+.black{
+    color: rgb(57, 55, 55);;
+}
+
+.titulo{
+    margin-top: 5vh;
+}
+
+.derecha h2{
+    margin-top: 0;
+}
+
+hr{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    height: 1px;
+    border: none;
+    background-color: rgb(230, 224, 224);
+}
+
+.derecha table{
+    padding-bottom: 20px;
+}
+
+.derecha th{
+    padding-bottom: 1vh;
+}
+
+.pDescripcion{
+    padding-top: 4vh;
+    padding-bottom: 10vh;
+}
+
+li{
+    list-style: none;
+    padding-bottom: 1vh;
+}
+
+table{
+    width: 100%;
+    height: auto;
+    padding-bottom: 1vh;
+}
+
+tr{
+    padding-bottom: 1.5vh;  
+}
+
+.icon{
+padding-top: 3vh;
+}
+
+.alineacionFin{
+    text-align: end;
+    float: right;
+}
+
+.nombre{
+    background-color: aquamarine;
+    clear: both;
+    width: 30%;
+    height: 100px;
+    background-color:rgb(45, 50, 96);
+    padding-top: 50px;
+}
+
+.nombre h1{
+    width: 300%;
+    height: 100px;
+    padding-top: 5px;
+    background-color: white;
+    margin-bottom: 0%;
+    padding-bottom: 0;
+}
+
+p{
+    text-align: start;
+}
+
+.margen th{
+    margin-bottom: 3vh;
+}
+
+.margen{
+    margin-bottom: 3vh;
+}
+
+.tableContacto{
+    padding-bottom: 3vh;
+}
+
+
+.formacionFecha{
+    width: 130px;
+}

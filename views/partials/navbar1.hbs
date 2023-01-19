@@ -1,0 +1,21 @@
+    <link rel="stylesheet" href="../../css/navbar.css">
+    <header>
+        <nav class="header" id="header">
+            <a href="/"><img src="../../img/LogoMakr-8VCzkk.png" class="logo" alt="logo"></a>
+            <ul>
+                <li class="menu"><a href="/">Inicio</a></li>
+                <li><a href="/auth/login">Ingresar</a></li>
+                <li class="menu"><a href="/pages/plantillas">Plantillas</a></li>
+                <!--<li class="menu"><a href="/pages/donaciones">Donaciones</a></li>-->
+            </ul>
+        </nav>
+    </header>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script>
+        AOS.init();
+        window.addEventListener("scroll", function(){
+            var header= document.querySelector("header");
+            header.classList.toggle("abajo", window.scrollY>50);
+        })
+    </script>

@@ -1,0 +1,419 @@
+<style>
+        *{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+
+body{
+    width: 100%;
+    height:200vh;
+    background-color: rgb(222, 217, 217);
+    font-family: 'Raleway', sans-serif; 
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+.container{
+    width: 100%;
+    height: auto;
+}
+
+/*------------- Datos de la Cuenta ---------------------*/
+
+.datosCuenta{
+    width: 85%;
+    height: auto;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.datosCuenta div{
+    height:auto;
+    background-color: white;
+    box-shadow: 3px 3px rgba(60, 58, 58, 0.21), 0.2em 0 1em rgb(36, 36, 35);
+    padding: 6vh;
+    margin: 5vh;
+}
+
+.datosCuenta div h3{
+    margin-bottom: 5vh;
+    color:rgb(85, 81, 81);
+    text-align: center;
+}
+
+h3{
+    clear: both;
+}
+
+form{
+    width: auto;
+    min-width: 20vh;
+    height: auto;
+    padding-bottom: 15vh;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 0%;
+    font-size: 3vh;
+    color: #4A69DC; 
+    text-align: center;
+}
+
+form div{
+    width: 100%;
+    background-color: #a904fc;
+}
+
+input{
+    width: 30%;
+    height: 7vh;
+    background-color: #ede8e8;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 4vh;
+    outline: none;
+    font-size: 3vh;
+    float: left;
+    margin-right: 3vh;
+}
+
+form label{
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    font-weight: bolder;
+    float: left;
+    margin-right: 3vh;
+}
+
+form p{
+    font-weight: bold;
+    font-size: 2.5vh;
+    margin-bottom: 2vh;
+    text-align: center;
+    clear: both;
+}
+
+h1{
+    padding-top: 0%;
+    margin-top: 0%;
+    font-size: 4.2vh;
+    text-align: center;
+}
+
+form h2{
+    padding-top: 0;
+    text-align: center;
+    margin-bottom: 5vh;
+    color: rgb(0, 76, 255);
+}
+
+textarea{
+    clear: both;
+    width: 80%;
+    min-height: 20vh;
+    margin-bottom: 8vh;
+    background-color: #ede8e8;
+
+}
+
+span{
+    font-size: 0;
+    display: block;
+}
+
+.guardar{
+    width: auto;
+    height: 7vh;
+    text-align: center;
+    background: linear-gradient(90deg, rgba(0,146,255,1) 0%, rgba(51,0,255,1) 100%, rgba(0,129,255,1) 100%);
+    border: none;
+    border-radius: 50px;
+    color: white;
+    font-size: 3vh;
+    margin-top: 8vh;
+    margin-left: 15%;
+    margin-right: 10%;
+    padding-left: 2vh;
+    padding-right: 2vh;
+    clear: both;
+}
+
+.guardar:hover{
+    background: linear-gradient(90deg, rgba(0,182,255,1) 0%, rgba(0,211,255,1) 0%, rgba(0,129,255,1) 100%);
+}
+
+a{
+    text-decoration: none;
+    color: #3c3a3a;
+    font-size: 3vh;
+    font-weight: bolder;
+    padding-left: 1vh;
+    margin-top: 3vh;
+}
+
+a:hover{
+    color: #4f4e50;
+}
+
+.pregunta{
+    color: #3c3a3a;
+}
+
+.correElectronico{
+    width: 70%;
+}
+
+.contraseña{
+    width: 70.5%;
+}
+
+.confirmarContraseña{
+    width: 66%;
+}
+
+.editar{
+    width: 3.5vh;
+    height: 3.5vh;
+    background-color: transparent;
+    float: right;
+    margin-top: -8vh;
+    border: none;
+    border-radius: 10px;
+}
+
+.editar img{
+    width: 100%;
+    height: 100%;
+}
+
+.editar:hover{
+    background-color: #9b969f8a;
+}
+
+.eliminar{
+    margin: 0%;
+    padding: 0%;
+    text-align: center;
+    margin-top: 10vh;
+    text-decoration: none;
+    color: #a904fc;
+    clear: both;
+}
+
+.eliminar:hover{
+    color: #b970ea;
+}
+
+/*-------------- MediaQuerys -----------*/
+@media (max-width:1630px){
+    input{
+        width: 80%;
+        margin-left: 10%;
+    }
+    label{
+        margin-left: 10%; 
+    }
+    .correElectronico{
+        width: 80%;
+    }
+    .contraseña{
+        width: 80%;
+    }
+    .confirmarContraseña{
+        width: 80%;
+    }
+    .confirmarContraseña{
+        width:80%;
+    }
+    .apellido{
+        width: 80%;
+    }
+    .localidad{
+        width: 80%;
+    }
+    
+}
+
+/*-----------------------*/
+@media (max-width:1181px){
+    form{
+        margin-left: 14%;
+        margin-right: 5%;
+    }
+}
+
+/*--------------------------*/
+@media (max-width:1090px){
+    form{
+        width: auto;
+        margin-left: 11%;
+        margin-right: 2%;
+    }
+}
+
+/*--------------------------*/
+@media (max-width:1067px){
+    form{
+        margin: left 10%;
+        margin-right: 1%;
+    }
+}
+
+/*-----------------------*/
+@media (max-width:1045px){
+    form{
+        margin: left 10%;
+        margin-right: 0%;
+    }
+}
+
+/*-----------------------*/
+@media (max-width:985px){
+    form{
+        width: 90%;
+        margin-left: 10%;
+    }
+}
+
+/*-----------------------*/
+@media (max-width:880px){
+    form{
+        width: 90%;
+        margin-left: 12%;
+    }
+    .menuLateral{
+        min-width: 20vh;
+        padding-right: 1%;
+    }
+    .menuLateral li{
+        font-size: 2.5vh;
+    }
+    .logo{
+        width: 95%;
+    }
+    input{
+        width: 80%;
+        margin-left: 6%;
+    }
+    label{
+        margin-left: 6%; 
+    }
+}
+
+/*-----------------------*/
+@media (max-width:630px){
+    form{
+        margin-left: 15%;
+    }
+    input{
+        margin-left: 5%;
+    }
+    label{
+        margin-left: 5%; 
+    }
+}
+
+/*-----------------------*/
+@media (max-width:590px){
+    form{
+        margin-left: 17%;
+    }
+}
+
+/*-----------------------*/
+@media (max-width:560px){
+    .guardar{
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+    .menuLateral{
+        width: 100%;
+        height: 11vh;
+        clear: both;
+        margin-top: 0vh;
+        position: relative;
+        display: flex;
+    }
+    .menuLateral ul{
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        margin-left: 6%;
+    }
+    .menuLateral li{
+        margin-top: -6vh;
+        margin-right: 1%;
+        margin-bottom: 1vh;
+        font-size: 2.5vh;
+    }
+    .logo{
+        display: none;
+    }
+    .userIcon{
+        display: none;
+    }
+    .menuLateral h3{
+        display: none;
+    }
+    .cerrarSesion{
+        margin-top: 0%;
+    }
+    .datosCuenta{
+        width: 100%;
+    clear: both;
+    float: left;
+
+    }
+    .datosCuenta div{
+        padding: 2vh;
+        margin: 2vh;
+        float: left;
+    }
+    form{
+        width: 100%;
+        margin-left: -1%;
+        float: left;
+    }
+}
+
+/*-----------------------*/
+@media (max-width:500px) {
+    .datosCuenta{
+        height: auto;
+        width: auto;
+        margin-left: 1vh;
+        margin-right: 1vh;
+    }
+}
+
+/*-----------------------*/
+@media (max-width:425px){
+    form h2{
+        font-size: 3.5vh;
+    }
+}
+
+    </style>
+    <header><a href="/datosPersonales/verMisDatos">⤺Volver</a></header>
+    <title>Eliminar mi Cuenta</title>
+
+    {{>alertas}}
+
+    <div class="datosCuenta"> 
+        <form>
+            <input type="hidden" name="_csrf" value="{{csrfToken}}"/>
+            <h1>Eliminar mi Cuenta</h1>
+            <div> 
+                <br>
+                <h1 class="pregunta">¿Está seguro que desea eliminar su cuenta?</h1>
+                <p>Todos sus datos almacenados se perderán</p>
+                <br>
+                <span>-</span>
+                <a href="/auth/confirmEliminar" class="eliminar">Sí, eliminar mi cuenta</a>
+                <a href="/datosPersonales/verMisDatos"><button class="guardar" type="button">Cancelar</button></a>
+            </div>
+        </form>
+    </div>

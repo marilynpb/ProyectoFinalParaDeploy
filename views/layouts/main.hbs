@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    {{{link}}}
+<link rel="shortcut icon" type="image/x-icon" href="../../img/favicon.ico" />
+{{{title}}}
+    
+</head>
+
+<body>
+    {{{header}}}
+
+    {{{body}}}
+
+    {{{script}}}
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script>
+        AOS.init();
+        window.addEventListener("scroll", function(){
+            var header= document.querySelector("header");
+            header.classList.toggle("abajo", window.scrollY>50);
+        })
+    </script>
+</body>
+</html>

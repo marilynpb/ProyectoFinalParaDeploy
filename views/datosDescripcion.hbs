@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="../css/subirFoto.css">
+<title>Perfíl</title>
+
+<body>
+    {{>navbar2}}
+
+    {{>alertas}}
+
+    <main>    
+        <div class="container">
+            <div class="encabezado">
+                <h1 class="titulo">Sobre mí</h1>
+                <p class="contador">4/5</p>
+                <meter min="0" max="100" value="85" low="75" high="75" id="barra"></meter>
+            </div>
+            <div class="contForm">   
+                <form method="post" action="">
+                    <input type="hidden" name="_csrf" value="{{csrfToken}}"/>
+                    <label>Descripción*</label>
+                    <span>-</span>
+                    <label class="entreParentesis">(una breve explicación sobre ti, tus logros, cualidades, objetivos, etc.)</label>
+                    <textarea id="descripcion" name="descripcionPerfil"></textarea>
+                    <div class="siguiente">
+                        <button type="submit">Siguiente</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    {{>footer}}
+</body>

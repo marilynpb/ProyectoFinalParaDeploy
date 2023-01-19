@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="../css/login.css">
+<title>Login</title>
+
+<body>
+    {{>navbar1}}
+    
+    {{>alertas}}
+
+    <main>
+        <div class="login"> 
+            <form action="" method="post">  
+                <h2>Ingresá a tu cuenta</h2>
+                <input type="hidden" name="_csrf" value="{{csrfToken}}"/>
+                <label>Email</label>
+                <input type="email" maxlength="30" placeholder="Email@dominio.com" id="email" name="email" value="glumy_inmortal@hotmail.com"> 
+                <label>Contraseña</label>
+                <input type="password" maxlength="70" placeholder="******************" id="contraseña" name="password" value="123456">
+                <p class="problemas"><a href="/auth/rememberPass">¿Olvidaste tu contraseña?</a></p>
+                <button onclick="validar()" type="submit">Ingresar</button>
+                <p class="noTienesCuenta">No tienes cuenta?  <a href="register">Registrate aquí</a></p>
+            </form>
+        </div> 
+    </main>
+
+    {{>footer}}
+</body>

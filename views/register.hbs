@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="../css/registro.css">
+<title>Registro</title>
+
+<body>
+    {{>navbar1}}
+
+    {{>alertas}}
+        
+    <main>
+        <div class="registro"> 
+            <form action="" method="post">  
+                <h2>Registráte</h2>
+                <p class="ingresa">Ingresá tu email y una contraseña</p>
+                <input type="hidden" name="_csrf" value="{{csrfToken}}"/>
+                <label>Email</label>
+                <input type="string" maxlength="30" placeholder="Email@dominio.com" name="email">
+                <label>Contraseña</label>
+                <input type="password" maxlength="70" placeholder="******************" name="password">
+                <label>Confirmar contraseña</label>
+                <input type="password" maxlength="70" placeholder="******************" name="rePassword">
+                <button type="submit">Registrarse</button>
+                <p class="yaTienesCuenta">Ya tienes cuenta?<a href="login">Ingresá aquí</a></p>
+            </form>
+        </div> 
+    </main>
+    
+    {{>footer}}
+</body>

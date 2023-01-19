@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="../css/contacto.css">
+<title>Contacto</title>
+
+<body>
+    
+    {{>navbar1}}
+
+    <main>  
+        <div class="contacto"> 
+            <form>  
+                <h2>Formulario de contacto</h2>
+                <p>Contestaremos lo antes posible para resolver tus dudas/problemas</p>
+                <label>Nombre</label>
+                <input type="text" maxlength="16" id="nombre">
+                <label>Email</label>
+                <input type="email" maxlength="30" id="email">
+                <label>Asunto</label>
+                <input type="text" maxlength="30" id="asunto">
+                <label>Mensaje</label>
+                <textarea id="mensaje"></textarea>
+                <button onclick="validarCampos()">Enviar</button>
+            </form>
+        </div> 
+    </main>
+
+    {{>footer}}
+</body>

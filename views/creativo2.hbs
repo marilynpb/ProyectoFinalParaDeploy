@@ -1,0 +1,158 @@
+<link rel="stylesheet" href="../css/creativo2.css">
+<title>Diseño Creativo2</title>
+    {{>navbar3}}
+<main>
+    <div class="container">
+        <form action="" method="get">
+            <div class="header">
+                <div class="headerIzq">
+                    {{#each user}}
+                        <img src="../img/perfiles/{{this.imagen}}">
+                    {{/each}}
+                </div>
+                <div class="headerDer">
+                    {{#each personal}}
+                        <h1 class="titulo nombre">{{this.nombre}} {{this.apellido}}</h1>
+                    {{/each}}
+                    <hr>
+                    {{#each descripcionData}}
+                        <p>{{this.descripcionPerfil}}</p>
+                    {{/each}}
+                </div>
+            </div>
+
+            <div class="izquierda">
+                <h2>CONTACTO</h2>
+                <table>
+                    {{#each personal}}
+                        <tr>
+                            <th><img src="../img/Iconos/geo.svg"></th>
+                            <th><p>{{this.calle}} {{this.altura}}, {{this.pais}}</p></th>
+                        </tr>
+                        <tr class="tableContacto">
+                            <th><img src="../img/Iconos/tel.svg"></th>
+                            <th><p>{{this.telefono}}
+                        </tr>
+                    {{/each}}
+                    {{#each user}}
+                        <tr class="tableContacto">
+                            <th><img src="../img/Iconos/eemail.svg"></th>
+                            <th><p>{{this.email}}</p></th>
+                        </tr>
+                    {{/each}}
+                </table>
+                <hr>
+
+                <h2>IDIOMAS</h2>
+                {{#each laboralData}}
+                    <ul>
+                        <li>
+                            <table>
+                                <tr>
+                                    <th><p>{{this.idioma}}</p></th>
+                                    <th class="alineacionFin"><p>{{this.nivel}}</p></th>
+                                </tr>
+                            </table>
+                        </li>
+                        <li>
+                            <table>
+                                <tr class="tableContacto">
+                                    <th><p>{{this.idioma2}}</p></th>
+                                    <th class="alineacionFin"><p>{{this.nivel2}}</p></th>
+                                </tr>
+                            </table>
+                        </li>
+                        <li>
+                            <table>
+                                <tr class="tableContacto">
+                                    <th><p>{{this.idioma3}}</p></th>
+                                    <th class="alineacionFin"><p>{{this.nivel3}}</p></th>
+                                </tr>
+                            </table>
+                        </li>
+                    </ul>
+                <hr>
+            </div>
+
+            <div class="derecha">
+                <h2 class="margen">FORMACIÓN ACADÉMICA</h2>
+                <table>
+                    <tr>
+                        <td><h3>{{this.instituto}} {{this.finalizado}}</h3></td>
+                    </tr>
+                    <tr>
+                        <th><h3 class="black">{{this.carrera}}</h3></th>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td><h3>{{this.instituto2}} {{this.finalizado2}}</h3></td>
+                    </tr>
+                    <tr>
+                        <th><h3 class="black">{{this.carrera2}}</h3></th>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td><h3>{{this.instituto3}} {{this.finalizado3}}</h3></td>
+                    </tr>
+                    <tr>
+                        <th><h3 class="black">{{this.carrera3}}</h3></th>
+                    </tr>
+                </table>
+                <hr>
+
+                <h2 class="margen">EXPERIENCIA LABORAL</h2>
+                <table>
+                    <tr>
+                        <th><h3 class="black">{{this.puesto}}</h3></th>
+                    </tr>
+                    <tr>
+                        <td><h3>{{this.empresa}} {{this.desde}} {{this.hasta}}</h3></td>
+                    </tr>
+                    <tr class="tareas">
+                        <ul>
+                            <li>
+                                <td><p>{{this.descripcion}}</p></td>
+                            </li>
+                        </ul>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <th><h3 class="black">{{this.puesto2}}</h3></th>
+                    </tr>
+                    <tr>
+                        <td><h3>{{this.empresa2}} {{this.desde2}} {{this.hasta2}}</h3></td>
+                    </tr>
+                    <tr class="tareas">
+                        <ul>
+                            <li>
+                                <td><p>{{this.descripcion2}}</p></td>
+                            </li>
+                        </ul>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <th><h3 class="black">{{this.puesto3}}</h3></th>
+                    </tr>
+                    <tr>
+                        <td><h3>{{this.empresa3}} {{this.desde3}} {{this.hasta3}}</h3></td>
+                    </tr>
+                    <tr class="tareas">
+                        <ul>
+                            <li>
+                                <td><p>{{this.descripcion3}}</p></td>
+                            </li>
+                        </ul>
+                    </tr>
+                </table>
+                {{/each}}
+            </div>
+        </form>
+    </div>
+</main>
+
+
+

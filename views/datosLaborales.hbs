@@ -1,0 +1,221 @@
+<link rel="stylesheet" href="../css/formacionYExperiencia.css">
+<title>Formación y experiencia</title>
+
+<body>
+    {{>navbar2}}
+
+    {{>alertas}}
+
+    <main>   
+        <div class="container">
+            <div class="encabezado">
+                <h1 class="titulo">Información personal</h1>
+                <p class="contador">2/5</p>
+                <meter min="0" max="100" value="25" low="26" high="150" id="barra"></meter>
+            </div>
+
+            <form class="formulario" action="" method="post">
+                <input type="hidden" name="_csrf" value="{{csrfToken}}"/>
+
+                <!-- ******************Form Formación****************** -->
+                <details open>
+                    <summary>Formación</summary>
+                    <div class="formacion">
+                        <label>Carrera/Título*</label>
+                        <input type="text" class="carrera" name="carrera" id="carrera1">
+                        <div class="formIzq">
+                        <label>Instituto/Universidad*</label>
+                        <input type="text" name="instituto" id="instituto1">
+                    </div>
+                    <div class="formDer">
+                        <label>Año de Egreso*</label>
+                        <span>-</span>
+                        <input type="text" name="finalizado" placeholder="aaaa" id="finalizado1">
+                        <span>-</span>
+                    </div>
+                        <div class="añadirMas">
+                            <button id="agregar1" type="button" onclick="validar(1)">+ Añadir más estudios</button>
+                        </div>
+                    </div>
+                </details>
+
+                <div class="formacion agregado deshabilitado" id="nuevoForm1">
+                    <label>Carrera/Título</label>
+                    <input type="text" name="carrera2" id="carrera2">
+                    <div class="formIzq">
+                        <label>Instituto/Universidad</label>
+                        <input type="text" name="instituto2" id="instituto2">
+                    </div>
+                    <div class="formDer">
+                        <label>Fecha de Egreso</label>
+                        <span>-</span>
+                        <input type="text" name="finalizado2" placeholder="aaaa" id="finalizado2">
+                    <span>-</span>
+                    </div>
+                        <div class="añadirMas">
+                            <button id="agregar2" type="button" onclick="validar(2)">+ Añadir más estudios</button>
+                        </div>
+                </div>
+                </details>
+
+                <div class="formacion agregado deshabilitado" id="nuevoForm2">
+                    <label>Carrera/Título</label>
+                    <input type="text" name="carrera3" id="carrera3">
+                    <div class="formIzq">
+                        <label>Instituto/Universidad</label>
+                        <input type="text" name="instituto3" id="instituto3">
+                    </div>
+                    <div class="formDer">
+                        <label>Fecha de Egreso</label>
+                        <span>-</span>
+                        <input type="text" name="finalizado3" placeholder="aaaa" id="finalizado3">
+                    <span>-</span>
+                    </div>
+                    <div class="añadirMas">
+                            <button id="agregar3" type="button" onclick="validar(3)">+ Añadir más estudios</button>
+                    </div>
+                </div>
+                </details>
+
+                <!-- ******************Form Experiencias****************** -->
+                <details>
+                    <summary>Experiencia Laboral</summary>
+                    <div class="experiencia">
+                        <label>Puesto de trabajo*</label>
+                        <input type="text" name="puesto" id="puesto1">
+                        <label>Empresa*</label>
+                        <input type="text" name="empresa" id="empresa1">
+                        <label>Desde(año)*</label>
+                        <input type="text" name="desde" placeholder="aaaa" class="selectLarge" id="desde1">
+                        <span>-</span>
+                        <label>Hasta(año)*</label>
+                        <input type="text" name="hasta" placeholder="aaaa" class="selectLarge" id="hasta1">
+                        <span>-</span>
+                        <label>Descripcion del cargo y actividades realizadas*</label>
+                        <textarea name="descripcion" id="descripcion1"></textarea>
+                        <div class="añadirMas">
+                            <button id="agregarExp1" type="button" onclick="validarFormExp(1)">+ Añadir más experiencia</button>
+                        </div>
+                    </div>
+                </details>
+
+                    <div class="experiencia agregado deshabilitado" id="nuevoFormExp1">
+                        <label>Puesto de trabajo*</label>
+                        <input type="text" name="puesto2" id="puesto2">
+                        <label>Empresa*</label>
+                        <input type="text" name="empresa2" id="empresa2">
+                        <label>Desde(año)*</label>
+                        <input type="text" name="desde2" placeholder="aaaa" class="selectLarge" id="desde2">
+                        <span>-</span>
+                        <label>Hasta(año)*</label>
+                        <input type="text" name="hasta2" placeholder="aaaa" class="selectLarge" id="hasta2">
+                        <span>-</span>
+                        <label>Descripcion del cargo y actividades realizadas*</label>
+                        <textarea name="descripcion2" id="descripcion2"></textarea>
+                        <div class="añadirMas">
+                            <button id="agregarExp2" type="button" onclick="validarFormExp(2)">+ Añadir más experiencia</button>
+                        </div>
+                    </div>
+                </details>
+
+
+                    <div class="experiencia agregado deshabilitado" id="nuevoFormExp2">
+                        <label>Puesto de trabajo*</label>
+                        <input type="text" name="puesto3" id="puesto3">
+                        <label>Empresa*</label>
+                        <input type="text" name="empresa3" id="empresa3">
+                        <label>Desde(año)*</label>
+                        <input type="text" name="desde3" placeholder="aaaa" class="selectLarge" id="desde3">
+                        <span>-</span>
+                        <label>Hasta(año)*</label>
+                        <input type="text" name="hasta3" placeholder="aaaa" class="selectLarge" id="hasta3">
+                        <span>-</span>
+                        <label>Descripcion del cargo y actividades realizadas*</label>
+                        <textarea name="descripcion3" id="descripcion3"></textarea>
+                        <div class="añadirMas">
+                            <button id="agregarExp3" type="button" onclick="validarFormExp(3)">+ Añadir más experiencia</button>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- ******************Form Idiomas****************** -->
+                <details>
+                    <summary>Idiomas</summary>
+                    <div class="idiomas">
+                        <div class="formIzq">
+                            <label>Idioma</label>
+                            <input type="text" name="idioma" id="idioma1">
+                        </div>
+                        <div class="formDer">                                
+                            <label>Nivel</label>
+                            <span>-</span>
+                        <select name="nivel" id="idiomaNivel1">
+                            <option disabled selected>Elegir</option>
+                            <option>Básico</option>
+                            <option>Intermedio</option>
+                            <option>Avanzado</option>
+                            <option>Nativo</option>
+                        </select>
+                        </div>
+                        <div class="añadirMas">
+                            <button id="agregarIdioma1" type="button" onclick="validarFormIdioma(1)">+ Añadir más idiomas</button>
+                        </div>
+                    </div>
+                    </details>
+
+                    
+                    <div class="idiomas agregado idiomasNuevo deshabilitado" id="nuevoFormIdioma1">
+                        <div class="formIzq">
+                            <label>Idioma</label>
+                            <input type="text" name="idioma2" id="idioma2">
+                        </div>
+                        <div class="formDer">                                
+                            <label>Nivel</label>
+                            <span>-</span>
+                        <select name="nivel2" id="idiomaNivel2">
+                            <option disabled selected>Elegir</option>
+                            <option>Básico</option>
+                            <option>Intermedio</option>
+                            <option>Avanzado</option>
+                            <option>Nativo</option>
+                        </select>
+                        </div>
+                        <div class="añadirMas">
+                            <button id="agregarIdioma2" type="button" onclick="validarFormIdioma(2)">+ Añadir más idiomas</button>
+                        </div>
+                    </div>
+                    </details>
+
+                        <div class="idiomas agregado idiomasNuevo deshabilitado" id="nuevoFormIdioma2">
+                        <div class="formIzq">
+                            <label>Idioma</label>
+                            <input type="text" name="idioma3" id="idioma3">
+                        </div>
+                        <div class="formDer">                                
+                            <label>Nivel</label>
+                            <span>-</span>
+                        <select name="nivel3" id="idiomaNivel3">
+                            <option disabled selected>Elegir</option>
+                            <option>Básico</option>
+                            <option>Intermedio</option>
+                            <option>Avanzado</option>
+                            <option>Nativo</option>
+                        </select>
+                        </div>
+                        <div class="añadirMas">
+                            <button id="agregarIdioma3" type="button" onclick="validarFormIdioma(3)">+ Añadir más idiomas</button>
+                        </div>
+                    </div>
+                </details> 
+                <div class="siguiente">
+                    <a href=><button type="submit">Siguiente</button></a>
+                    <p class="politicas">Al hacer click acepta nuestros Términos y Condiciones</p>
+                </div>
+            </form> 
+        </div>
+    </main>
+
+    {{>footer}}
+
+    <script src="../js/agregarMas.js"></script>
+</body>

@@ -1,0 +1,476 @@
+    <!--<article class="card mb-2">
+        <div class="card-body">
+            <p>{{this.nombre}}</p>
+            <p>{{this.apellido}}</p>
+            <a href="eliminar/{{this._id}}" class="btn btn-danger">Eliminar</a>
+            <a href="editar/{{this._id}}" class="btn btn-warning">Editar</a>
+            <button data-short="{{this.email}}" href="#" class="btn btn-info">Copiar</button>
+        </div>
+    </article>-->
+
+<style>
+        *{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+p{
+    text-transform: lowercase;
+}
+p::first-letter{
+    text-transform: uppercase;
+}
+
+h1{
+    text-transform: lowercase;
+}
+h1::first-letter{
+    text-transform: uppercase;
+}
+
+h2{
+    text-transform: lowercase;
+}
+h2::first-letter{
+    text-transform: uppercase;
+}
+
+h3{
+    text-transform: lowercase;
+}
+h3::first-letter{
+    text-transform: uppercase;
+}
+
+h4{
+    text-transform: lowercase;
+}
+h4::first-letter{
+    text-transform: uppercase;
+}
+
+textarea{
+    text-transform: lowercase;
+}
+textarea::first-letter{
+    text-transform: uppercase;
+}
+
+body{
+    width: 100%;
+    height:200vh;
+    background-color: rgb(222, 217, 217);
+    font-family: 'Raleway', sans-serif; 
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+.container{
+    width: 100%;
+    height: auto;
+}
+
+/*------------- Datos de la Cuenta ---------------------*/
+
+.datosCuenta{
+    width: 85%;
+    height: auto;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.datosCuenta div{
+    height:auto;
+    background-color: white;
+    box-shadow: 3px 3px rgba(60, 58, 58, 0.21), 0.2em 0 1em rgb(36, 36, 35);
+    padding: 6vh;
+    margin: 5vh;
+}
+
+.datosCuenta div h3{
+    margin-bottom: 5vh;
+    color:rgb(85, 81, 81);
+    text-align: start;
+}
+
+form{
+    width: auto;
+    min-width: 20vh;
+    height: auto;
+    padding-bottom: 15vh;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 0%;
+    font-size: 3vh;
+    color: #4A69DC; 
+}
+
+input{
+    width: 30%;
+    height: 7vh;
+    background-color: #ede8e8;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 4vh;
+    outline: none;
+    font-size: 3vh;
+    float: left;
+    margin-right: 3vh;
+}
+
+form label{
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    font-weight: bolder;
+    float: left;
+    margin-right: 3vh;
+}
+
+form p{
+    font-weight: bold;
+    font-size: 2.5vh;
+    margin-bottom: 2vh;
+    text-align: end;
+    clear: both;
+}
+
+h1{
+    padding-top: 0%;
+    margin-top: 0%;
+    font-size: 4.2vh;
+}
+
+form h2{
+    padding-top: 0;
+    text-align: center;
+    margin-bottom: 5vh;
+    color: rgb(0, 76, 255);
+}
+
+span{
+    font-size: 0;
+    display: block;
+}
+
+.guardar{
+    width: auto;
+    height: 7vh;
+    text-align: center;
+    background: linear-gradient(90deg, rgba(0,146,255,1) 0%, rgba(51,0,255,1) 100%, rgba(0,129,255,1) 100%);
+    border: none;
+    border-radius: 50px;
+    color: white;
+    font-size: 3vh;
+    margin-top: 8vh;
+    margin-left: 15%;
+    margin-right: 10%;
+    padding-left: 2vh;
+    padding-right: 2vh;
+    clear: both;
+}
+
+.guardar:hover{
+    background: linear-gradient(90deg, rgba(0,182,255,1) 0%, rgba(0,211,255,1) 0%, rgba(0,129,255,1) 100%);
+}
+
+a{
+    text-decoration: none;
+    color: #3c3a3a;
+    font-size: 3vh;
+    font-weight: bolder;
+    padding-left: 1vh;
+    margin-top: 3vh;
+}
+
+a:hover{
+    color: #4f4e50;
+}
+
+.correElectronico{
+    width: 70%;
+}
+
+.contraseña{
+    width: 70.5%;
+}
+
+.confirmarContraseña{
+    width: 66%;
+}
+
+.editar{
+    width: 3.5vh;
+    height: 3.5vh;
+    background-color: transparent;
+    float: right;
+    margin-top: -8vh;
+    border: none;
+    border-radius: 10px;
+}
+
+.editar img{
+    width: 100%;
+    height: 100%;
+}
+
+.editar:hover{
+    background-color: #9b969f8a;
+}
+
+.perfilTextarea{
+    clear: both;
+    width: 80%;
+    min-height: 20vh;
+    margin-bottom: 8vh;
+    background-color: #ede8e8;
+}
+
+/*-------------- MediaQuerys -----------*/
+@media (max-width:1630px){
+    input{
+        width: 80%;
+        margin-left: 10%;
+    }
+    label{
+        margin-left: 10%; 
+    }
+    .correElectronico{
+        width: 80%;
+    }
+    .contraseña{
+        width: 80%;
+    }
+    .confirmarContraseña{
+        width: 80%;
+    }
+    .confirmarContraseña{
+        width:80%;
+    }
+    .apellido{
+        width: 80%;
+    }
+    .localidad{
+        width: 80%;
+    }
+    
+}
+
+/*-----------------------*/
+@media (max-width:1181px){
+    form{
+        margin-left: 14%;
+        margin-right: 5%;
+    }
+}
+
+/*--------------------------*/
+@media (max-width:1090px){
+    form{
+        width: auto;
+        margin-left: 11%;
+        margin-right: 2%;
+    }
+}
+
+/*--------------------------*/
+@media (max-width:1067px){
+    form{
+        margin: left 10%;
+        margin-right: 1%;
+    }
+}
+
+/*-----------------------*/
+@media (max-width:1045px){
+    form{
+        margin: left 10%;
+        margin-right: 0%;
+    }
+}
+
+/*-----------------------*/
+@media (max-width:985px){
+    form{
+        width: 90%;
+        margin-left: 10%;
+    }
+}
+
+/*-----------------------*/
+@media (max-width:880px){
+    form{
+        width: 90%;
+        margin-left: 12%;
+    }
+    .menuLateral{
+        min-width: 20vh;
+        padding-right: 1%;
+    }
+    .menuLateral li{
+        font-size: 2.5vh;
+    }
+    .logo{
+        width: 95%;
+    }
+    input{
+        width: 80%;
+        margin-left: 6%;
+    }
+    label{
+        margin-left: 6%; 
+    }
+}
+
+/*-----------------------*/
+@media (max-width:630px){
+    form{
+        margin-left: 15%;
+    }
+    input{
+        margin-left: 5%;
+    }
+    label{
+        margin-left: 5%; 
+    }
+}
+
+/*-----------------------*/
+@media (max-width:590px){
+    form{
+        margin-left: 17%;
+    }
+}
+
+/*-----------------------*/
+@media (max-width:560px){
+    .guardar{
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+    .menuLateral{
+        width: 100%;
+        height: 11vh;
+        clear: both;
+        margin-top: 0vh;
+        position: relative;
+        display: flex;
+    }
+    .menuLateral ul{
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        margin-left: 6%;
+    }
+    .menuLateral li{
+        margin-top: -6vh;
+        margin-right: 1%;
+        margin-bottom: 1vh;
+        font-size: 2.5vh;
+    }
+    .logo{
+        display: none;
+    }
+    .userIcon{
+        display: none;
+    }
+    .menuLateral h3{
+        display: none;
+    }
+    .cerrarSesion{
+        margin-top: 0%;
+    }
+    .datosCuenta{
+        width: 100%;
+    clear: both;
+    float: left;
+
+    }
+    .datosCuenta div{
+        padding: 2vh;
+        margin: 2vh;
+        float: left;
+    }
+    form{
+        width: 100%;
+        margin-left: -1%;
+        float: left;
+    }
+}
+
+/*-----------------------*/
+@media (max-width:500px) {
+    .datosCuenta{
+        height: auto;
+        width: auto;
+        margin-left: 1vh;
+        margin-right: 1vh;
+    }
+}
+
+/*-----------------------*/
+@media (max-width:425px){
+    form h2{
+        font-size: 3.5vh;
+    }
+}
+
+</style>
+
+<header><a href="/datosPersonales/verMisDatos">⤺Volver</a></header>
+<title>Editar mis Experiencias</title>
+
+{{>alertas}}
+<div class="datosCuenta"> 
+    <form action="" method="post">
+        <input type="hidden" name="_csrf" value="{{csrfToken}}"/>
+        <h3>Editar mis Experiencias</h3>
+        <div>
+            <h3 class="subtitulos">Experiencia n°1</h3><span>-</span>
+            <label>Puesto</label><span>-</span>
+            <input type="text" name="puesto" value={{this.puesto}}>
+            <label>Empresa</label><span>-</span>
+            <input type="text" name="empresa" value={{this.empresa}}>
+            <label>Desde(año)*</label>
+            <input type="text" name="desde" placeholder="aaaa" class="selectLarge" id="desde1">
+            <span>-</span>
+            <label>Hasta(año)*</label>
+            <input type="text" name="hasta" placeholder="aaaa" class="selectLarge" id="hasta1">
+            <span>-</span>
+            <label>Descripción del puesto</label><span>-</span>
+            <textarea  type="text" name="descripcion" disabled class="perfilTextarea">{{this.descripcion}}</textarea>
+
+            <h3 class="subtitulos">Experiencia n°2</h3><span>-</span>
+            <label>Puesto</label><span>-</span>
+            <input type="text" name="puesto2" value={{this.puesto2}}>
+            <label>Empresa</label><span>-</span>
+            <input type="text" name="empresa2" value={{this.empresa2}}>
+            <label>Desde(año)*</label>
+            <input type="text" name="desde2" placeholder="aaaa" class="selectLarge" id="desde2">
+            <span>-</span>
+            <label>Hasta(año)*</label>
+            <input type="text" name="hasta2" placeholder="aaaa" class="selectLarge" id="hasta2">
+            <span>-</span>
+            <label>Descripción del puesto</label><span>-</span>
+            <textarea  type="text" name="descripcion2" class="perfilTextarea">{{this.descripcion2}}</textarea>
+
+            <h3 class="subtitulos">Experiencia n°3</h3><span>-</span>
+            <label>Puesto</label><span>-</span>
+            <input type="text" name="puesto3" value={{this.puesto2}}>
+            <label>Empresa</label><span>-</span>
+            <input type="text" name="empresa3" value={{this.empresa2}}>
+            <label>Desde(año)*</label>
+            <input type="text" name="desde3" placeholder="aaaa" class="selectLarge" id="desde3">
+            <span>-</span>
+            <label>Hasta(año)*</label>
+            <input type="text" name="hasta3" placeholder="aaaa" class="selectLarge" id="hasta3">
+            <span>-</span>
+            <label>Descripción del puesto</label><span>-</span>
+            <textarea  type="text" name="descripcion3" class="perfilTextarea">{{this.descripcion3}}</textarea>
+            <span>-</span>
+            <button class="guardar" type="submit">Guardar</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,64 @@
+<link rel="stylesheet" href="../css/plantillas.css">
+<title>Plantillas</title>
+
+<body>
+    {{>navbar1}}
+
+    {{>alertas}}
+    <main>    
+        <div class="container">
+            <h1 class="titulo">Mirá todas las plantillas que tenemos</h1>
+            <form name="elegirplantilla">
+                <div class="gridPlantillas">
+                    <div class="contanedorPlantillas">
+                        <div class="gridImg">
+                            <img src="../img/ejemplos/page/basico.svg" alt="">
+                            <figcaption>Básico</figcaption>
+                        </div>
+                        <div class="gridImg">
+                            <img src="../img/ejemplos/page/creativo1.svg" alt="">
+                            <figcaption>Creativo</figcaption>
+                        </div>
+                        <div class="gridImg">
+                            <img src="../img/ejemplos/page/moderno1.svg" alt="">
+                            <figcaption>Moderno</figcaption>
+                        </div>
+                    </div>
+                    <div class="contanedorPlantillas">
+                        <div class="gridImg">
+                            <img src="../img/ejemplos/page/cronologico.svg" alt="">
+                            <figcaption>Cronológico</figcaption>
+                        </div>
+                        <div class="gridImg">
+                            <img src="../img/ejemplos/page/funcional.svg" alt="">
+                            <figcaption>Funcional</figcaption>
+                        </div>
+                        <div class="gridImg">
+                            <img src="../img/ejemplos/page/mixto.svg" alt="">
+                            <figcaption>Mixto</figcaption>
+                        </div>
+                    </div>
+                    <div class="contanedorPlantillas">
+                        <div class="gridImg">
+                            <img src="../img/ejemplos/page/moderno2.svg" alt="">
+                            <figcaption>Moderno</figcaption>
+                        </div>
+                        <div class="gridImg">
+                            <img src="../img/ejemplos/page/creativo2.svg" alt="">
+                            <figcaption>Creativo</figcaption>
+                        </div>
+                        <div class="gridImg">
+                            <img src="../img/ejemplos/page/moderno3.svg" alt="">
+                            <figcaption>Moderno</figcaption>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="siguiente">
+            <a href="/verificarDatos/verificarDatos">Crear mi Curriculum</a>
+        </div> 
+    </main>
+    
+    {{>footer}}
+</body>

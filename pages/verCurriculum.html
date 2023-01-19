@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style/verCurriculum.css">
+    <title>Mi curriculum</title>
+</head>
+<body>
+    <header>
+        <nav class="header" id="header">
+            <a href="../index.html"><img src="../img/LogoMakr-8VCzkk.png" class="logo" alt="logo"></a>
+            <ul>
+                <li class="menu"><a href="../index.html">Inicio</a></li>
+                <li class="login"><a href="./miCuenta.html">Mi cuenta</a></li>
+                <li class="menu"><a href="./plantillas.html">Plantillas</a></li>
+                <li class="menu"><a href="./donaciones.html">Donaciones</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>    
+        <div class="container">
+            <div class="encabezado">
+                <h1 class="titulo">Mi curriculum</h1>
+                <div class="print-edit">
+                    <div><button class="editar" onclick="print()"><img src="../img/Iconos/pencil-square.svg" alt=""></button></div>
+                    <div><button class="editar"><img src="../img/Iconos/printer.svg" alt=""></button></div>
+                </div>
+            </div>
+            <div id="miCV"></div>
+        </div>
+    </main>
+
+    <footer>
+        <img src="../img/LogoMakr-8VCzkk.png" class="logoFooter" alt="logo">
+        <ul class="redesSociales">
+            <li>
+                <a href="https://www.facebook.com" target="_blank"><img src="../img/redes/734399_facebook_media_online_social_icon.png" alt="face"></a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com" target="_blank"><img src="../img/redes/734394_instagram_media_online_social_icon.png" alt="insta"></a>
+            </li>
+            <li>
+                <a href="https://ar.linkedin.com" target="_blank"><img src="../img/redes/734383_in_linked_media_online_social_icon.png" alt="lin"></a>
+            </li>
+        </ul>
+        <nav class="menuFooter">
+            <ul class="menuFooterUl">
+                <li><a href="./acercaDe.html">Acerca de</a></li>
+                <li class="separador"><a href="./contacto.html">Contacto</a></li>
+                <li class="separador"><a href="../index.html#preguntasFrecuentes">Preguntas frecuentes</a></li>
+                <li class="separador"><a href="./terminosYCondiciones.html">Términos y condiciones</a></li>
+                <li class="separador"><a href="./politicasDePrivacidad.html">Política de privacidad</a></li> 
+            </ul>
+        </nav>
+        <div class="copy">
+            <p>Copyright © 2022.All Rights Reserved By <em>Creador de Curriculums</em> </p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="../js/elegirPlantilla.js"></script>
+    <script src="../js/imprimirCV.js"></script>
+    <script>
+        AOS.init();
+        window.addEventListener("scroll", function(){
+            var header= document.querySelector("header");
+            header.classList.toggle("abajo", window.scrollY>50);
+        })
+    </script>
+</body>
+</html>

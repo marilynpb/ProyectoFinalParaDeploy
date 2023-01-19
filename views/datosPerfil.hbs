@@ -1,0 +1,35 @@
+<link rel="stylesheet" href="../css/subirFoto.css">
+<title>Perfíl</title>
+
+<body>
+    {{>navbar2}}
+
+    {{>alertas}}
+
+    <main>    
+        <div class="container">
+            <div class="encabezado">
+                <h1 class="titulo">Sobre mí</h1>
+                <p class="contador">3/5</p>
+                <meter min="0" max="100" value="75" low="75" high="75" id="barra"></meter>
+            </div>
+            <div class="contForm">
+                <form action="datosPerfil?_csrf={{csrfToken}}" method="post" enctype="multipart/form-data">
+                    {{#if imagen}}
+                        <img src="../img/perfiles/{{imagen}}" alt="">
+                        {{else}}
+                            <img src="../img/perfiles/perfilDefault.jpg" alt="">
+                    {{/if}}
+                    <span>-</span>
+                    <label>Subí tu foto*</label>
+                    <input type="file" name="myFile" id="formFileSm">    
+                    <div class="siguiente">
+                        <button type="submit">Siguiente</button>
+                    </div>
+                </form> 
+            </div>
+        </div>
+    </main>
+
+    {{>footer}}
+</body>

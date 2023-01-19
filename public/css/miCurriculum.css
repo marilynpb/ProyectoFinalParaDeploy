@@ -1,0 +1,434 @@
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+
+body{
+    width: 100%;
+    height: auto;
+    background-color: white;
+    font-family: 'Raleway', sans-serif; 
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+.container{
+    width: 100%;
+    height: auto;
+}
+
+
+/*------------- Menú lateral ---------------------*/
+
+.menuLateral{
+    width: 20%;
+    min-width: 25vh;
+    height: 280vh;
+    background-color: #18102C;
+    float: left;
+    text-align: center;
+    padding-top:8vh;
+    position: fixed;
+    color: rgb(11, 91, 176);
+}
+
+.menuLateral li{
+    font-size: 3vh;
+    font-weight: bold;
+    margin-top: 3vh;
+    margin-bottom: 4vh;
+    list-style: none;
+}
+
+.logo{
+    margin-top: -3vh;
+    margin-bottom: 3vh;
+}
+
+.menuLateral h3{
+    margin-bottom: 15vh;
+}
+
+.icono{
+    width: 100%;
+}
+
+.userIcon{
+    margin-top: 2vh;
+}
+
+.apellido{
+    width: 32%;
+}
+
+.localidad{
+    width: 76%;
+}
+
+.cerrarSesion{
+    margin-top: 65%;
+}
+
+.menuLateral a{
+    text-decoration: none;
+    color:#faf7f7;
+}
+
+.menuLateral a:hover{
+    color: #6b686d;
+}
+
+
+/*------------- Datos de la Cuenta ---------------------*/
+
+.datosCuenta{
+    width: 85%;
+    height: auto;
+    float: right;
+    text-align: center;
+    padding-top: 5vh;
+    padding-right: 6.5%;
+}
+
+.datosCuenta div{
+    height:auto;
+    background-color: white;
+    box-shadow: 3px 3px rgba(60, 58, 58, 0.21), 0.2em 0 1em rgb(36, 36, 35);
+    padding: 6vh;
+    margin: 5vh;
+}
+
+.datosCuenta div h3{
+    margin-bottom: 5vh;
+    color:rgb(85, 81, 81);
+    text-align: start;
+}
+
+form{
+    width: auto;
+    min-width: 20vh;
+    height: 100%;
+    padding-bottom: 15vh;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 3vh;
+    color: #4A69DC; 
+    text-align: center;
+}
+
+
+form h1{
+    font-size: 4.2vh;
+    text-align: center;
+}
+
+form h2{
+    padding-top: 12%;
+    text-align: center;
+    margin-bottom: 5vh;
+    color: rgb(0, 76, 255);
+}
+
+
+.descargar{
+    width: auto;
+    height: 6vh;
+    min-height: 7vh;
+    text-align: center;
+    background: linear-gradient(90deg, rgba(0,146,255,1) 0%, rgba(51,0,255,1) 100%, rgba(0,129,255,1) 100%);
+    border: none;
+    border-radius: 50px;
+    color: white;
+    font-size: 3vh;
+    margin-top: 8vh;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2vh;
+    padding-right: 2vh;
+    clear: both;
+}
+
+.descargar:hover{
+    background: linear-gradient(90deg, rgba(0,182,255,1) 0%, rgba(0,211,255,1) 0%, rgba(0,129,255,1) 100%);
+}
+
+form p{
+    font-weight: bold;
+    font-size: 2.5vh;
+    margin-bottom: 2vh;
+    text-align: end;
+    clear: both;
+}
+
+a{
+    text-decoration: none;
+    color:#a945ec; 
+}
+
+a:hover{
+    color: #c775f3;
+}
+
+.miCV{
+    text-align: center;
+    width: 100%;
+    height: autos;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cvs{
+    width: 90%;
+    height: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    clear: both;
+}
+
+.cvs img{
+    width: 90%;
+}
+
+.editar{
+    width: 3.5vh;
+    height: 3.5vh;
+    background-color: transparent;
+    float: right;
+    border: none;
+    border-radius: 10px;
+}
+
+.conMargin{
+    margin-top: -25px;
+}
+
+.editar img{
+    width: 100%;
+    height: 100%;
+}
+
+.editar:hover{
+    background-color: #9b969f8a;
+}
+
+
+/*-------------- MediaQuerys -----------*/
+@media (max-width:1630px){
+    input{
+        width: 80%;
+        margin-left: 10%;
+    }
+    label{
+        margin-left: 10%; 
+    }
+    .correElectronico{
+        width: 80%;
+    }
+    .contraseña{
+        width: 80%;
+    }
+    .confirmarContraseña{
+        width: 80%;
+    }
+    .confirmarContraseña{
+        width:80%;
+    }
+    .apellido{
+        width: 80%;
+    }
+    .localidad{
+        width: 80%;
+    }
+}
+
+/*-----------------------*/
+@media (max-width:1181px){
+    form{
+        margin-left: 14%;
+        margin-right: 5%;
+    }
+}
+
+/*--------------------------*/
+@media (max-width:1090px){
+    form{
+        width: auto;
+        margin-left: 11%;
+        margin-right: 2%;
+    }
+}
+
+/*--------------------------*/
+@media (max-width:1067px){
+    form{
+        margin: left 10%;
+        margin-right: 1%;
+    }
+}
+
+/*-----------------------*/
+@media (max-width:1045px){
+    form{
+        margin: left 10%;
+        margin-right: 0%;
+    }
+}
+
+/*-----------------------*/
+@media (max-width:985px){
+    form{
+        width: 90%;
+        margin-left: 10%;
+    }
+}
+
+/*-----------------------*/
+@media (max-width:900px){
+    form{
+        margin-left: 10%;
+    }
+}
+
+/*-----------------------*/
+@media (max-width:880px){
+    form{
+        width: 90%;
+        margin-left: 5%;
+    }
+    .menuLateral{
+        min-width: 20vh;
+        padding-right: 1%;
+    }
+    .menuLateral li{
+        font-size: 2.5vh;
+    }
+    .logo{
+        width: 95%;
+    }
+    input{
+        width: 80%;
+        margin-left: 6%;
+    }
+    label{
+        margin-left: 6%; 
+    }
+}
+
+/*-----------------------*/
+@media (max-width:866px){
+    form{
+        width: auto;
+        margin-left: 5%;
+    }
+}
+
+/*-----------------------*/
+@media (max-width:866px){
+    .descargar{
+        width: 90%;
+    }
+}
+
+/*-----------------------*/
+@media (max-width:683px){
+    .descargar{
+        width: 100%;
+    }
+}
+
+/*-----------------------*/
+@media (max-width:630px){
+    input{
+        margin-left: 5%;
+    }
+    label{
+        margin-left: 5%; 
+    }
+    form h1{
+        margin-left: 15%;
+    }
+}
+
+/*-----------------------*/
+@media (max-width:600px){
+    .descargar{
+        width: 110%;
+    }
+}
+
+/*-----------------------*/
+@media (max-width:560px){
+    .descargar{
+        width: 80%;
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+    .menuLateral{
+        width: 100%;
+        height: 11vh;
+        clear: both;
+        margin-top: 0vh;
+        position: relative;
+        display: flex;
+    }
+    .menuLateral ul{
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        margin-left: 6%;
+    }
+    .menuLateral li{
+        margin-top: -6vh;
+        margin-right: 1%;
+        margin-bottom: 1vh;
+        font-size: 2.5vh;
+    }
+    .logo{
+        display: none;
+    }
+    .userIcon{
+        display: none;
+    }
+    .menuLateral h3{
+        display: none;
+    }
+    .cerrarSesion{
+        margin-top: 0%;
+    }
+    .datosCuenta{
+        width: 100%;
+        margin-left: 5%;
+        clear: both;
+        float: left;
+    }
+    .datosCuenta div{
+        padding: 2vh;
+        margin: 2vh;
+        float: left;
+    }
+    form{
+        width: 100%;
+        margin-left: -6%;
+        float: left;
+    }
+}
+
+/*-----------------------*/
+@media (max-width:500px) {
+    .datosCuenta{
+        height: auto;
+        width: auto;
+        margin-left: 5%;
+        margin-right: 1vh;
+    }
+}
+
+/*-----------------------*/
+@media (max-width:425px){
+    form h2{
+        font-size: 3.5vh;
+    }
+}

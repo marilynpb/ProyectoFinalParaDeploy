@@ -1,0 +1,25 @@
+    <link rel="stylesheet" href="../css/verCurriculum.css">
+    <title>Mi curriculum</title>
+<body>
+    {{>navbar2}}
+
+    {{>alertas}}
+
+    <main>    
+        <div class="container">
+            {{#each plantilla}}
+            <h2>{{this.elegirPlantilla}}</h2>
+            <div class="encabezado">
+                <h1 class="titulo">Mi curriculum</h1>
+                <div class="print-edit">
+                    <div><button class="editar" onclick="print()"><img src="../img/Iconos/pencil-square.svg" alt=""></button></div>
+                    <div><button class="editar"><img src="../img/Iconos/printer.svg" alt=""></button></div>
+                </div>
+            </div>
+            <div id="miCV"></div>
+            {{/each}}
+        </div>
+    </main>
+
+    {{>footer}}
+</body>

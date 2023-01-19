@@ -1,0 +1,161 @@
+<link rel="stylesheet" href="../css/basico.css">
+<title>Diseño Basico</title>
+    {{>navbar3}}
+<main>
+    <div class="container">
+        <form action="" method="get">
+            <div class="bordeColorTop"></div>
+            {{#each personal}}
+            <h1 class="titulo">{{this.nombre}} {{this.apellido}}</h1>
+            <hr>
+            {{/each}}
+            <div class="izquierda">
+                {{#each user}}
+                    <img src="../img/perfiles/{{this.imagen}}">
+                    <h2>Datos personales</h2>
+                    <hr>
+                {{/each}}
+
+                {{#each personal}}
+                    <h3 class="tituloIzq">Nombre</h3>
+                    <h3 class="datos" name="nombre">{{this.nombre}} {{this.apellido}}</h3>
+                    <br>
+                {{/each}}
+
+                {{#each user}}
+                    <h3 class="tituloIzq">Correo electrónico</h3>
+                    <h3 class="datos">{{this.email}}</h3>
+                {{/each}}
+
+                {{#each personal}}
+                    <br>
+                    <h3 class="tituloIzq">Teléfono</h3>
+                    <h3 class="datos" name="telefono">{{this.telefono}}</h3>
+                    <br>
+                    <h3 class="tituloIzq">Dirección</h3>
+                    <h3 class="datos">{{this.calle}} {{this.altura}}, {{this.pais}}</h3>
+                {{/each}}
+            </div>
+
+            <div class="derecha">
+                <h2>Perfíl</h2>
+                <hr>
+                {{#each descripcionData}}
+                    <p name="descripcionPerfil">{{this.descripcionPerfil}}</p>
+                {{/each}}
+
+                <h2 class="margen">Experiencia</h2>
+                {{#each laboralData}}
+                    <hr>
+                    <table>
+                        <tr>
+                            <th>
+                                <h3 class="black">{{this.puesto}}</h3>
+                            </th>
+                            <th rowspan="2" class="alineacionFin">
+                                <h3>{{this.desde}}-{{this.hasta}}</h3>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td><h3>{{this.empresa}}</h3></td>
+                        </tr>
+                        <tr>
+                            <td><p>{{this.descripcion}}</p></th>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <th>
+                                <h3 class="black">{{this.puesto2}}</h3>
+                            </th>
+                            <th rowspan="2" class="alineacionFin">
+                                <h3>{{this.desde2}}-{{this.hasta2}}</h3>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td><h3>{{this.empresa2}}</h3></td>
+                        </tr>
+                        <tr>
+                        <td><p>{{this.descripcion2}}</p></td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <th><h3 class="black">{{this.puesto3}}</h3></th>
+                            <th rowspan="2" class="alineacionFin">
+                                <h3>{{this.desde3}}-{{this.hasta3}}</h3>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td><h3>{{this.empresa3}}</h3></td>
+                        </tr>
+                        <tr>
+                            <td><p>{{this.descripcion3}}</p></th>
+                        </tr>
+                    </table>
+
+                    <h2 class="margen">Formación</h2>
+                    <hr>
+                    <table>
+                        <tr>
+                            <th><h3 class="black">{{this.carrera}}</h3></th>
+                            <th rowspan="2" class="alineacionFin">
+                                <h3>Año egreso: {{this.finalizado}}</h3>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td><h3>{{this.instituto}}</h3></td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <th><h3 class="black">{{this.carrera2}}</h3></th>
+                            <th rowspan="2" class="alineacionFin">
+                                <h3>Año egreso: {{this.finalizado2}}</h3>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td><h3>{{this.instituto2}}</h3></td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <th><h3 class="black">{{this.carrera3}}</h3></th>
+                            <th rowspan="2" class="alineacionFin">
+                                <h3>Año egreso: {{this.finalizado3}}</h3>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td><h3>{{this.instituto3}}</h3></td>
+                        </tr>
+                    </table>
+
+                    <h2 class="margen">Idiomas</h2>
+                    <hr>
+                    <table>
+                        <tr>
+                            <th><p>{{this.idioma}}</p></th>
+                            <th class="alineacionFin"><p>{{this.nivel}}</p></th>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <th><p>{{this.idioma2}}</p></th>
+                            <th class="alineacionFin"><p>{{this.nivel2}}</p></th>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <th><p>{{this.idioma3}}</p></th>
+                            <th class="alineacionFin"><p>{{this.nivel3}}</p></th>
+                        </tr>
+                    </table> 
+                {{/each}}
+            </div>
+        <div class="bordeColorBottom"></div>
+        </form>
+    </div>
+</main>
+
+
+

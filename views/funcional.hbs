@@ -1,0 +1,156 @@
+<link rel="stylesheet" href="../css/funcional.css">
+<title>Diseño Funcional</title>
+    {{>navbar3}}
+<main>
+    <div class="container">
+        <form action="" method="get">
+            <div class="header">
+                <div class="headerDer"> 
+                    <div class="tablas">
+                        <table>
+                            {{#each user}}
+                                <tr class="tableContacto">
+                                    <th><img src="../img/Iconos/eemail.svg"></th>
+                                    <th><p>{{this.email}}</p></th>
+                                </tr>
+                            {{/each}}
+                        </table>
+                        <table>
+                            {{#each personal}}
+                                <tr class="tableContacto">
+                                    <th><img src="../img/Iconos/tel.svg"></th>
+                                    <th><p>{{this.telefono}}</p>
+                                </tr>
+                        </table>
+                        <table>
+                            <tr class="tableContacto">
+                                <th><img src="../img/Iconos/geo.svg"></th>
+                                <th><p>{{this.calle}} {{this.altura}}, {{this.pais}}</p></th>
+                            </tr>
+                            {{/each}}
+                        </table>
+                    </div>
+                </div>
+                {{#each user}}
+                    <img src="../img/perfiles/{{this.imagen}}" class="imgPerfil">
+                {{/each}}
+                {{#each personal}}
+                    <div class="linea"><h1>{{this.nombre}} {{this.apellido}}</h1></div>
+                {{/each}}
+                <table class="tablePerfil">
+                    {{#each descripcionData}}
+                        <tr>
+                            <th ><h2>PERFÍL PROFESIONAL</h2></th>
+                            <th  class="conPadding"><p>{{this.descripcionPerfil}}</p></th>
+                        </tr>
+                    {{/each}}
+                </table>
+            </div>
+
+            <div class="izquierda">
+                {{#each laboralData}}
+                    <hr>
+                    <h2 class="margen">EXPERIENCIA LABORAL</h2>
+                    <table>
+                        <tr>
+                            <th class="formacionFecha">
+                                <p>{{this.desde}} {{this.hasta}}</p>
+                            </th>
+                            <th  class="conPadding"><p>{{this.puesto}}</p></th>
+                        </tr>
+                        <tr>
+                            <th class="formacionFecha"><p></p></th>
+                            <th  class="conPadding"><p>{{this.empresa}}</p></th>
+                        </tr>
+                        <tr>
+                            <th class="formacionFecha"><p></p></th>
+                            <th  class="conPadding"><p>{{this.descripcion}}</p></th>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <th class="formacionFecha">
+                                <p>{{this.desde2}} {{this.hasta2}}</p>
+                            </th>
+                            <th  class="conPadding"><p>{{this.puesto2}}</p></th>
+                        </tr>
+                        <tr>
+                            <th class="formacionFecha"><p></p></th>
+                            <th  class="conPadding"><p>{{this.empresa2}}</p></th>
+                        </tr>
+                        <tr>
+                            <th class="formacionFecha"><p></p></th>
+                            <th  class="conPadding"><p>{{this.descripcion2}}</p></th>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <th class="formacionFecha"><p>{{this.desde3}} {{this.hasta3}}</p></th>
+                            <th  class="conPadding"><p>{{this.puesto3}}</p></th>
+                        </tr>
+                        <tr>
+                            <th class="formacionFecha"><p></p></th>
+                            <th  class="conPadding"><p>{{this.empresa3}}</p></th>
+                        </tr>
+                        <tr>
+                            <th class="formacionFecha"><p></p></th>
+                            <th  class="conPadding"><p>{{this.descripcion3}}</p></th>
+                        </tr>
+                    </table>
+                    <hr>
+                    <h2 class="margen">FORMACIÓN ACADÉMICA</h2>
+                    <table>
+                        <tr>
+                            <th class="formacionFecha"><p>{{this.finalizado}}</p></th>
+                            <th  class="conPadding"><p>{{this.carrera}}</p></th>
+                        </tr>
+                        <tr>
+                            <th class="formacionFecha"><p></p></th>
+                            <th  class="conPadding"><p>{{this.instituto}}</p></th>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <th class="formacionFecha"><p>{{this.finalizado2}}</p></th>
+                            <th  class="conPadding"><p>{{this.carrera2}}</p></th>
+                        </tr>
+                        <tr>
+                            <th class="formacionFecha"><p></p></th>
+                            <th  class="conPadding"><p>{{this.instituto2}}</p></th>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <th class="formacionFecha"><p>{{this.finalizado3}}</p></th>
+                            <th  class="conPadding"><p>{{this.carrera3}}</p></th>
+                        </tr>
+                        <tr>
+                            <th class="formacionFecha"><p></p></th>
+                            <th  class="conPadding"><p>{{this.instituto3}}</p></th>
+                        </tr>
+                    </table>
+                    <hr>
+
+                    <h2 class="margen">IDIOMAS</h2>
+                    <table>
+                        <tr>
+                            <th class="formacionFecha"><p>{{this.idioma}}</p></th>
+                            <th  class="conPadding"><p>{{this.nivel}}</p></th>
+                        </tr>
+                        <tr>
+                            <th class="formacionFecha"><p>{{this.idioma2}}</p></th>
+                            <th  class="conPadding"><p>{{this.nivel2}}</p></th>
+                        </tr>
+                        <tr>
+                            <th class="formacionFecha"><p>{{this.idioma3}}</p></th>
+                            <th  class="conPadding"><p>{{this.nivel3}}</p></th>
+                        </tr>
+                    </table>
+                {{/each}}
+            </div>
+        </form>
+    </div>
+</main>
+
+
+

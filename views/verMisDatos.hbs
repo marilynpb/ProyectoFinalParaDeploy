@@ -1,0 +1,199 @@
+<link rel="stylesheet" href="../css/miCuenta.css">
+<title>Mi cuenta</title>
+<main>
+    <div class="container">
+        <div class="menuLateral">
+            <a href="/home"><img src="../img/LogoMakr-8VCzkk.png" class="logo" alt="logo"></a>
+            <ul>
+                <li><img src="../img/Iconos/person-circle.svg" class="userIcon"></li>
+                <!--<li><a href="/verMisDatos/miCurriculum">Ver mi CV</a></li>-->
+                <li><a href="/verificarDatos/verificarDatos">Crear Curriculum</a></li>
+                <li><a href="/auth/loguot" ><div class="icono cerrarSesion"><p>Cerrar sesión</p><img src="../img/Iconos/box-arrow-in-right.svg"></a></div></li>
+            </ul>
+        </div>
+
+        {{>alertas2}}
+
+        <div class="datosCuenta"> 
+            <form action="" method="get">
+                <input type="hidden" name="_csrf" value="{{csrfToken}}"/>
+                    <h1>Mis datos</h1>
+
+                    <!-- **************Div Cuenta************** -->
+                    <div class="divCuenta">
+                        <h3>Cuenta</h3>
+                        <div>
+                            {{#each user}}
+                                <a href="editarFotoPerfil/{{this._id}}" class="editar"><img src="../img/Iconos/pencil-square.svg"></a>
+                                <form action="datosPerfil?_csrf={{csrfToken}}" method="post" enctype="multipart/form-data">
+                                    <img src="../img/perfiles/{{this.imagen}}" alt="" class="fotoPerfil">
+                                    <span>-</span>
+                                <form method="post" action="">
+                                <span>-</span>
+                                <label class="email">Correo Electrónico</label>
+                                <input type="text" class="correElectronico"  disabled value={{this.email}}>
+                            {{/each}}
+                            <span>-</span>
+                            <p><a href="/auth/eliminarCuenta">Eliminar cuenta</a></p>
+                        </div>
+                    </div>  
+
+                    <!-- **************Div Perfíl************** -->
+                    <div class="divDatos">
+                        <h3>Perfíl</h3>
+                        <div>
+                            {{#each datosDescripcion}}
+                            <a href="editarPerfil/{{this._id}}" class="editar"><img src="../img/Iconos/pencil-square.svg"></a>
+                            <label>Sobre mí</label>
+                            <textarea  type="text" name="descripcionPerfil" disabled class="perfilTextarea">{{this.descripcionPerfil}}</textarea>
+                            {{/each}}
+                        </div>
+                    </div>
+                    <span>-</span>
+                    <!--
+                    <div class="divContraseña">
+                        <h3>Cambiar contraseña</h3>
+                        <div>
+                            <button onclick="modificarDatos()" class="editar"><img src="../img/Iconos/pencil-square.svg"></button>
+                            <label>Contraseña actual</label>
+                            <input type="password" class="contraseña">
+                            <span>-</span>
+                            <label>Nueva contraseña</label>
+                            <input type="password" class="contraseña">
+                            <span>-</span>
+                            <label>Confirmar contraseña</label>
+                            <span>-</span>
+                            <input type="password" class="confirmarContraseña">
+                        </div>
+                    </div>-->
+
+                    <!-- **************Div Datos Personales************** -->
+                    <div class="divDatos">
+                        <h3>Datos Personales</h3>
+                        <div>
+                            {{#each personaldatas}}
+                            <a href="editar/{{this._id}}" class="editar"><img src="../img/Iconos/pencil-square.svg"></a>
+                            <label>Nombre</label>
+                            <input type="text" name="nombre" disabled value="{{this.nombre}}">
+                            <label>Apellido</label>
+                            <input type="text" class="apellido" name="apellido" disabled value="{{this.apellido}}">
+                            <span>-</span>
+                            <label>Teléfono</label>
+                            <input type="text" name="telefono" disabled value={{this.telefono}}>
+                            <label>Código Postal</label>
+                            <input type="text" name="cp" disabled value={{this.cp}}>
+                            <label>País</label>
+                            <input type="text" name="pais" disabled value="{{this.pais}}">
+                            <label>Dirección(calle)</label>
+                            <input type="text" name="calle" disabled value={{this.calle}}>
+                            <label>Altura</label>
+                            <input type="text" name="altura" disabled value={{this.altura}} >
+                            {{/each}}
+                        </div>
+                    </div>
+
+                    <!-- **************Div Formación************** -->
+                    <div class="divFormacion">
+                        <h3>Formación y Experiencia</h3>
+                        {{#each laboralData}}
+                        <a href="editarFormacion/{{this._id}}" class="editar"><img src="../img/Iconos/pencil-square.svg"></a>
+                        <div>
+                            <h3 class="subtitulos">Formación n°1</h3><span>-</span>                            
+                            <label>Carrera</label><span>-</span>
+                            <input type="text" name="carrera" disabled value="{{this.carrera}}">
+                            <label>Instituto</label><span>-</span>
+                            <input type="text" class="instituto" name="instituto" disabled value="{{this.instituto}}">
+                            <span>-</span>
+                            <label>Año de egreso</label><span>-</span>
+                            <input type="text" name="finalizado" disabled value={{this.finalizado}}>
+
+                            <h3 class="subtitulos">Formación n°2</h3><span>-</span>
+                            <label>Carrera</label><span>-</span>
+                            <input type="text" name="carrera2" disabled value="{{this.carrera2}}">
+                            <label>Instituto</label><span>-</span>
+                            <input type="text" class="instituto" name="instituto2" disabled value="{{this.instituto2}}">
+                            <span>-</span>
+                            <label>Año de egreso</label><span>-</span>
+                            <input type="text" name="finalizado2" disabled value={{this.finalizado2}}>
+
+                            <h3 class="subtitulos">Formación n°3</h3><span>-</span>
+                            <label>Carrera</label><span>-</span>
+                            <input type="text" name="carrera3" disabled value="{{this.carrera3}}">
+                            <label>Instituto</label><span>-</span>
+                            <input type="text" class="instituto3" name="instituto" disabled value="{{this.instituto3}}">
+                            <span>-</span>
+                            <label>Año de egreso</label><span>-</span>
+                            <input type="text" name="finalizado3" disabled value={{this.finalizado3}}>
+                            
+                            <!-- **************Div Experiencias************** -->
+                            <h3>Experiencias</h3>
+                            <a href="editarExperiencia/{{this._id}}" class="editar"><img src="../img/Iconos/pencil-square.svg"></a>
+                            <h3 class="subtitulos">Experiencia n°1</h3><span>-</span>
+                            <label>Puesto</label><span>-</span>
+                            <input type="text" name="puesto" disabled value="{{this.puesto}}">
+                            <label>Empresa</label><span>-</span>
+                            <input type="text" name="empresa" disabled value="{{this.empresa}}">
+                            <label>Desde(año)*</label>
+                            <input type="text" name="desde" placeholder="aaaa" class="selectLarge" id="desde1" value={{this.desde}}>
+                            <span>-</span>
+                            <label>Hasta(año)*</label>
+                            <input type="text" name="hasta" placeholder="aaaa" class="selectLarge" id="hasta1" value={{this.hasta}}>
+                            <span>-</span>
+                            <label>Descripción del puesto</label><span>-</span>
+                            <textarea  type="text" name="descripcion" disabled class="perfilTextarea">{{this.descripcion}}</textarea>
+
+                            <h3 class="subtitulos">Experiencia n°2</h3><span>-</span>
+                            <label>Puesto</label><span>-</span>
+                            <input type="text" name="puesto2" disabled value="{{this.puesto2}}">
+                            <label>Empresa</label><span>-</span>
+                            <input type="text" name="empresa2" disabled value="{{this.empresa2}}">
+                            <label>Desde(año)*</label>
+                            <input type="text" name="desde2" placeholder="aaaa" class="selectLarge" id="desde2" value={{this.desde2}}>
+                            <span>-</span>
+                            <label>Hasta(año)*</label>
+                            <input type="text" name="hasta2" placeholder="aaaa" class="selectLarge" id="hasta2" value={{this.hasta2}}>
+                            <span>-</span>
+                            <label>Descripción del puesto</label><span>-</span>
+                            <textarea  type="text" name="descripcion2" disabled class="perfilTextarea">{{this.descripcion2}}</textarea>
+
+                            <h3 class="subtitulos">Experiencia n°3</h3><span>-</span>
+                            <label>Puesto</label><span>-</span>
+                            <input type="text" name="puesto3" disabled value="{{this.puesto2}}">
+                            <label>Empresa</label><span>-</span>
+                            <input type="text" name="empresa3" disabled value="{{this.empresa2}}">
+                            <label>Desde(año)*</label>
+                            <input type="text" name="desde3" placeholder="aaaa" class="selectLarge" id="desde3" value={{this.desde3}}>
+                            <span>-</span>
+                            <label>Hasta(año)*</label>
+                            <input type="text" name="hasta3" placeholder="aaaa" class="selectLarge" id="hasta3" value={{this.hasta3}}>
+                            <span>-</span>
+                            <label>Descripción del puesto</label><span>-</span>
+                            <textarea  type="text" name="descripcion3" disabled class="perfilTextarea">{{this.descripcion3}}</textarea>
+                            
+                            <!-- **************Div Idiomas************** -->
+                            <h3>Idiomas</h3>
+                            <a href="editarIdioma/{{this._id}}" class="editar"><img src="../img/Iconos/pencil-square.svg"></a>
+                            <h3 class="subtitulos">Idioma n°1</h3><span>-</span>
+                            <label>Idioma</label><span>-</span>
+                            <input type="text" name="idioma" disabled value="{{this.idioma}}">
+                            <label>Nivel</label><span>-</span>
+                            <input type="text" name="nivel" disabled value={{this.nivel}} >
+                            
+                            <h3 class="subtitulos">Idioma n°2</h3><span>-</span>
+                            <label>Idioma</label><span>-</span>
+                            <input type="text" name="idioma2" disabled value="{{this.idioma2}}">
+                            <label>Nivel</label><span>-</span>
+                            <input type="text" name="nivel2" disabled value={{this.nivel2}} >
+
+                            <h3 class="subtitulos">Idioma n°3</h3><span>-</span>
+                            <label>Idioma</label><span>-</span>
+                            <input type="text" name="idioma3" disabled value="{{this.idioma3}}">
+                            <label>Nivel</label><span>-</span>
+                            <input type="text" name="nivel3" disabled value={{this.nivel3}} >
+                            {{/each}}
+                        </div>
+                    </div>
+                </form>
+        </div>
+    </main>
+    <script src="../public/js/habilitarInputs.js"></script>

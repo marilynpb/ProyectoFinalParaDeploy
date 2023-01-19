@@ -1,0 +1,71 @@
+/*---------------- Portada ---------------*/
+
+header{
+    width: 100%;
+    font-family: 'Exo 2', sans-serif;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+.header{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-content:space-around;
+    position: fixed;
+}
+
+header.abajo{
+    background-color: #18102C;
+    position: fixed;
+    height: 7vh;
+    margin-bottom: 10%;
+    z-index: 10;
+}
+
+header.abajo ul li{
+    margin-top: 0%;
+    line-height: 7vh;
+    color: rgb(205, 200, 200);
+    font-weight: bolder;
+}
+
+header.abajo a:hover{
+    color: #A400FF;
+}
+
+header.abajo .logo{
+    width:27vh;
+    height: 3.5vh;
+}
+
+.logo{
+    width:27vh;
+    height: 3.5vh;
+    justify-content: start;
+    align-content: start;
+    margin-top: 6%;
+}
+
+.header ul{
+    display: flex;
+    justify-content: flex-end;
+    align-content: flex-end;
+}
+
+.header li{
+    line-height: 8vh;
+    margin-left: 5vh;
+    margin-right: 3vh;
+    font-size: 2vh;
+    font-weight: bolder;
+    list-style: none;
+}
+
+header a{    
+    color:#DDDDDD;
+}
+
+header a:hover{
+    color: #A400FF;
+}

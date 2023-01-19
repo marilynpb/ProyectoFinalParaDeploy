@@ -1,0 +1,105 @@
+<link rel="stylesheet" href="../css/elegirPlantilla.css">
+<title>Elegir Plantilla</title>
+
+<body>
+    {{>navbar2}}
+
+    {{>alertas}}
+
+    <main>    
+        <div class="container">
+            <div class="encabezado">
+                <h1 class="titulo">Elíge una Plantilla</h1>
+                <h3>Si deseas ver o actualizar tu información haz click <a href="/datosPersonales/verMisDatos" class="verMiInfo">aquí</a></h3>
+            </div>
+            <form name="soloElegirPlantilla" action="" method="post">
+                <input type="hidden" name="_csrf" value="{{csrfToken}}"/>
+                <div class="gridPlantillas">
+                    <div class="contanedorPlantillas">
+                        <div class="gridImg">
+                            <label class="tituloPlantilla">Básico
+                                <div class="circulo">
+                                    <input type="radio" name="elegirPlantilla" value="basico" class="basico">
+                                </div>
+                                <img src="../img/ejemplos/page/basico.svg" alt="">
+                            </label>
+                        </div>
+                        <div class="gridImg">
+                            <label class="tituloPlantilla">Creativo
+                                <div class="circulo">
+                                    <input type="radio" name="elegirPlantilla" value="creativo1" class="creativo">
+                                </div>
+                                <img src="../img/ejemplos/page/creativo1.svg" alt="">
+                            </label>
+                        </div>
+                        <div class="gridImg">
+                            <label class="tituloPlantilla">Moderno
+                                <div class="circulo">
+                                    <input type="radio" name="elegirPlantilla" value="moderno1" class="moderno">
+                                </div>
+                                <img src="../img/ejemplos/page/moderno1.svg" alt="">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="contanedorPlantillas">
+                        <div class="gridImg">
+                            <label class="tituloPlantilla">Cronológico
+                                <div class="circulo">
+                                    <input type="radio" name="elegirPlantilla" value="cronologico" class="cronologico">
+                                </div>
+                                <img src="../img/ejemplos/page/cronologico.svg" alt="">
+                            </label>
+                        </div>
+                        <div class="gridImg">
+                            <label class="tituloPlantilla">Funcional
+                                <div class="circulo">
+                                    <input type="radio" name="elegirPlantilla" value="funcional" class="funcional">
+                                </div>
+                                <img src="../img/ejemplos/page/funcional.svg" alt="">
+                            </label>
+                        </div>
+                        <div class="gridImg">
+                            <label class="tituloPlantilla">Mixto
+                                <div class="circulo">
+                                    <input type="radio" name="elegirPlantilla" value="mixto">
+                                </div>
+                                <img src="../img/ejemplos/page/mixto.svg" alt="">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="contanedorPlantillas">
+                        <div class="gridImg">
+                            <label class="tituloPlantilla">Moderno
+                                <div class="circulo">
+                                    <input type="radio" name="elegirPlantilla" value="moderno2" class="moderno">
+                                </div>
+                                <img src="../img/ejemplos/page/moderno2.svg" alt="">
+                            </label>
+                        </div>
+                        <div class="gridImg">
+                            <label class="tituloPlantilla">Creativo
+                                <div class="circulo">
+                                    <input type="radio" name="elegirPlantilla" value="creativo2" class="creativo">
+                                </div>
+                                <img src="../img/ejemplos/page/creativo2.svg" alt="">
+                            </label>
+                        </div>
+                        <div class="gridImg">
+                            <label class="tituloPlantilla">Moderno
+                                <div class="circulo">
+                                    <input type="radio" name="elegirPlantilla" value="moderno3" class="moderno"> 
+                                </div>
+                            <img src="../img/ejemplos/page/moderno3.svg" alt="">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="siguiente">
+                        <button type="submit">Visualizar mi Curriculum</button>
+                    </div> 
+                </div>
+            </form>
+        </div>
+    </main>
+
+    {{>footer}}
+</body>
