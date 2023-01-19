@@ -170,7 +170,7 @@ const enviarResetPass = async(req, res)=>{
             html: `<h2>FreeCVMaker<h2>
                     <h2>Reestablecé tu contraseña<h2>
                     <p>Para hacerlo hacé click aquí:</p>
-                    <a href="http://localhost:3000/auth/reestablecerPassword/${user._id}">Reestablecer mi contraseña</a>
+                    <a href="${process.env.pathHeroku || 'http://localhost:3000'}/auth/reestablecerPassword/${user._id}">Reestablecer mi contraseña</a>
                     <br><br><p>Atentamente,</p><p>Equipo FreeCVMaker!💖</p>`,
         });
 
