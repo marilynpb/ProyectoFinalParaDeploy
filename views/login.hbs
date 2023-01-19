@@ -12,9 +12,9 @@
                 <h2>Ingresá a tu cuenta</h2>
                 <input type="hidden" name="_csrf" value="{{csrfToken}}"/>
                 <label>Email</label>
-                <input type="email" maxlength="30" placeholder="Email@dominio.com" id="email" name="email" value="glumy_inmortal@hotmail.com"> 
+                <input type="email" maxlength="30" placeholder="Email@dominio.com" id="email" name="email"> 
                 <label>Contraseña</label>
-                <input type="password" maxlength="70" placeholder="******************" id="contraseña" name="password" value="123456">
+                <input type="password" maxlength="70" placeholder="******************" id="contraseña" name="password">
                 <p class="problemas"><a href="/auth/rememberPass">¿Olvidaste tu contraseña?</a></p>
                 <button onclick="validar()" type="submit">Ingresar</button>
                 <p class="noTienesCuenta">No tienes cuenta?  <a href="register">Registrate aquí</a></p>
